@@ -14,6 +14,9 @@ namespace SonarCloudTest
     {
         public static void Main(string[] args)
         {
+            string password = "This_Should_Be_A_Problem";
+            Console.WriteLine(password);
+
             CreateWebHostBuilder(args).Build().Run();
         }
 
