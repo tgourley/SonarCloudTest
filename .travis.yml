@@ -1,2 +1,19 @@
 language: csharp
 solution: SonarCloudTest.sln
+mono: none
+sudo: required
+dist: xenial
+dotnet: 2.2
+script:
+  - dotnet restore
+  - dotnet build
+addons:
+  sonarcloud:
+    organization: "tgourley"
+    token:
+      secure: "YuzPnMKHf3KMMOqGo+l38vsCuIiKct1dn3706BzRO3NFHrZiFz+CKGvS479bRIuhtb6MUffwmaEO51RAVF0ILFQ+0tP/m8GjzwkaKJOKo8p0ZSrMtWANE5U94NcvpJIVeRl222kceBS0+aK6FZrM3YabDpblkno3ki5Y40yFv2vehlKSrqybj2A3hAcv3NSX1NQA7QIv3cPAhJIBSF2O1Taqj4AK4CliiVOoCkCnrdNblr7DKjtcjKKEOVt1MmDKtxEOAgyEAsSkMYIK6oyloOQm5oFQZjixKWEyX12g/GFGiLEbI1UYVVGwsi92EfO+3UfCKdUmaxdnHcycLAe+yyldSIe3R9Y+rzwMZoTEdDa+oz0V/A4jj2AeuLJYgF0OxNTcjavNQGxR3cBbU3BVgzjiPrSP6GQI1ETQDa+jwFqdvX8C0b/fqhZwlO4zaRNFlL5x0v6Mev6qLyon6BBMUGTmbyng6T8JFlSMEy4BJhw6Te82pSx3E8zeVMgwWZCaVuLGVHW6sSVGcR0Y+c+lmOaVp9wgKFPWAG7aiY0vRuh1YwACgTC9uSP/ODKoOb8BPPdXsuNbZptHYR4/gacSlJNUfE2NzD0v63YFkU3ID5dkd6PYHWO+ArTCZon7f07J4/NdMRR7QdAa47GQ+AbPAC98ZSe6W4BTf5oGC31aKfI=" #SonarScannerTravisCI
+script:
+  - sonar-scanner
+global:
+  - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+  - DOTNET_CLI_TELEMETRY_OPTOUT=1
