@@ -10,8 +10,7 @@ script:
 addons:
   sonarcloud:
     organization: "tgourley"
-    token:
-      secure: "DGCvVhMM47TlOK2VFaZzyevT7hGvPznWhsf92IiPn4cn3bmnzKQIwr4K3hqRaBTgGaGKSDoi18wJ9GrqzTWCdayv7oR5CCoWMTghNvvkyu4YX+4LrkxhoqbuN+isCcqXYnH04raeqYNikzPaJxz6mI+iXI03A66N+WSNNHLx5GCLOwBhVIjCLZZMglXJe0fgxjaqQaoJPE5q9pajNL75kx+IdSdpWUuZhTd95RCi5x8bNiQMtvVIt1SqQFev+fg/Ep6bxPBO/79+K3mNbI6Lgu4MCLDdpE7n5X4es/HxeNVSDYzmzt5ga8FwzW/ylcPAPSAOAdzcPkBcDC0THs7miNKXR/KUiqG0dvjMFVUzecyUj9WGRovKJ65DZQURftHei1l04yt8IWu3BqpWn3xiYLfUjVBTsxlCh39ipiTCtvL3oot5U8guEIjguPkFm4+hI0/T0xuBNacqmmqMBVZPeKo3E2be4a4oDlrDY6H70ePpf8WArtrT7T57ZPCu5mAbJ4yF1VuYNR/GPVQQ0srns726SpARrqUuuSlM58EygDNSTO2Jobor7fO9y9N3jxPrYbrtaFt7EGKiD6so5W+lIj8GhiWn7hoVb1vTJU2bqI5nHV6zoqdnv6pBTqN8PLsler9eMimWgPMZ6w4kWSC1U/4rXfH42SmCy9s3J7NTe+s=" #SonarScannerTravisCI
+    token: $SONAR_TOKEN
 script:
   - sonar-scanner
 global:
